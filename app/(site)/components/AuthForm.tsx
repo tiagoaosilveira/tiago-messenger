@@ -8,6 +8,7 @@ import AuthSocialButton from "@/app/(site)/components/AuthSocialButton";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { signIn, SignInResponse } from "next-auth/react";
 
 type Variant = 'LOGIN' | 'REGISTER';
 
@@ -47,7 +48,20 @@ const AuthForm = () => {
     }
 
     if (variant === 'LOGIN') {
+      signIn('credentials', {
+        ...data,
+        redirect: false,
+      })
+        .then((callback: SignInResponse | undefined) => {
+          if (callback?.error) {
+            toast.error('Invalid Credentials');
+          }
 
+          if (callback?.ok && !callback?.error) {
+            toast.success('Logged in!');
+          }
+        })
+        .finally(() => setIsLoading(false))
     }
   }
 
