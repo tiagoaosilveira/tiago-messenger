@@ -9,6 +9,7 @@ import clsx from "clsx";
 import { MdOutlineGroupAdd } from "react-icons/md";
 import ConversationBox from "@/app/conversations/components/ConversationBox";
 import GroupChatModal from "@/app/conversations/components/GroupChatModal";
+import getUsers from "@/app/actions/getUsers";
 
 interface ConversationListProps {
   initialItems: FullConversationType[];
@@ -16,7 +17,8 @@ interface ConversationListProps {
 }
 
 const ConversationList: React.FC<ConversationListProps> = ({
-  initialItems
+  initialItems,
+  users,
 }) => {
   const [items, setItems] = useState(initialItems);
   const [isModalOpen, setIsModalOpen] = useState(false);
