@@ -7,7 +7,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import Modal from "@/app/components/Modal";
 import { FiAlertTriangle } from "react-icons/fi";
-import { Dialog, DialogTitle } from "@headlessui/react";
+import { DialogTitle } from "@headlessui/react";
 import Button from "@/app/components/Button";
 
 interface ConfirmModalProps {
@@ -19,7 +19,6 @@ interface ConfirmModalProps {
 const ConfirmModal: React.FC<ConfirmModalProps> = ({
   isOpen,
   onClose,
-  children
 }) => {
   const router = useRouter();
   const { conversationId } = useConversation();
