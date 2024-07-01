@@ -1,6 +1,6 @@
 'use client';
 
-import { Conversation } from "@prisma/client";
+import { Conversation, User } from "@prisma/client";
 import React, { useState } from "react";
 import { FullConversationType } from "@/app/types";
 import { useRouter } from "next/navigation";
@@ -12,6 +12,7 @@ import GroupChatModal from "@/app/conversations/components/GroupChatModal";
 
 interface ConversationListProps {
   initialItems: FullConversationType[];
+  users: User[];
 }
 
 const ConversationList: React.FC<ConversationListProps> = ({
@@ -26,7 +27,7 @@ const ConversationList: React.FC<ConversationListProps> = ({
 
   return (
     <>
-      <GroupChatModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}/>
+      <GroupChatModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} users={users}/>
       <aside className={clsx(`
         fixed
         inset-y-0
