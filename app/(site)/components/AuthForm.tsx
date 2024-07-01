@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import Input from "@/app/components/inputs/input";
 import Button from "@/app/components/Button";
@@ -10,6 +10,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { signIn, SignInResponse, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import LoadingModal from "@/app/components/LoadingModal";
 
 type Variant = 'LOGIN' | 'REGISTER';
 
@@ -20,8 +21,11 @@ const AuthForm = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     if (session?.status === 'authenticated') {
       router.push('/users');
+    } else {
+      setIsLoading(false);
     }
   }, [session?.status, router]);
 
@@ -95,6 +99,10 @@ const AuthForm = () => {
   }
 
   return (
+    <>
+      { isLoading && (
+        <LoadingModal />
+      )}
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white px-4 py-8 shadow sm:rounded-lg sm:px-10">
           <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
@@ -138,6 +146,7 @@ const AuthForm = () => {
           </div>
         </div>
       </div>
+    </>
   )
 }
 
