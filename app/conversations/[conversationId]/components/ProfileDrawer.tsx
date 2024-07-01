@@ -4,7 +4,7 @@ import React, { Fragment, useMemo, useState } from 'react';
 import { Conversation, User } from "@prisma/client";
 import useOtherUser from "@/app/hooks/useOtherUser";
 import { format } from "date-fns";
-import { Dialog, Transition } from "@headlessui/react";
+import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/react";
 import { IoClose, IoTrash } from "react-icons/io5";
 import Avatar from "@/app/components/Avatar";
 import ConfirmModal from "@/app/conversations/[conversationId]/components/ConfirmModal";
@@ -49,19 +49,19 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
           <p>Hello Modal</p>
         </div>
       </ConfirmModal>
-      <Transition.Root show={isOpen} as={Fragment}>
+      <Transition show={isOpen} as={Fragment}>
         <Dialog as='div' className="relative z-50" onClose={onClose}>
-          <Transition.Child as={Fragment}
+          <TransitionChild as={Fragment}
               enter='ease-out duration-500' enterFrom='opacity-0' enterTo='opacity-100' leave='ease-in duration-100' leaveFrom='opacity-100' leaveTo='opacity-0'>
             <div className="fixed inset-0 bg-black bg-opacity-40"/>
-          </Transition.Child>
+          </TransitionChild>
           <div className="fixed inset-0 overlflow-hidden">
             <div className="absolute inset-0 overflow-hidden">
               <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-                <Transition.Child as={Fragment}
+                <TransitionChild as={Fragment}
                   enter='transform transition ease-in-out duration-500' enterFrom='translate-x-full' enterTo='translate-x-0'
                   leave='transform transition ease-in-out duration-500' leaveTo='translate-x-full'>
-                  <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
+                  <DialogPanel className="pointer-events-auto w-screen max-w-md">
                     <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
                       <div className="px-4 sm:px-6">
                         <div className="flex items-start justify-end">
@@ -149,13 +149,13 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
                         </div>
                       </div>
                     </div>
-                  </Dialog.Panel>
-                </Transition.Child>
+                  </DialogPanel>
+                </TransitionChild>
               </div>
             </div>
           </div>
         </Dialog>
-      </Transition.Root>
+      </Transition>
     </>
   );
 }
