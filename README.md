@@ -195,16 +195,16 @@ Project Link: [https://github.com/tiagoaosilveira/tiago-messenger](https://githu
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/tiagoaosilveira/tiago-wordle.svg?style=for-the-badge
-[contributors-url]: https://github.com/tiagoaosilveira/tiago-wordle/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/tiagoaosilveira/tiago-wordle.svg?style=for-the-badge
-[forks-url]: https://github.com/tiagoaosilveira/tiago-wordle/network/members
-[stars-shield]: https://img.shields.io/github/stars/tiagoaosilveira/tiago-wordle.svg?style=for-the-badge
-[stars-url]: https://github.com/tiagoaosilveira/tiago-wordle/stargazers
-[issues-shield]: https://img.shields.io/github/issues/tiagoaosilveira/tiago-wordle.svg?style=for-the-badge
-[issues-url]: https://github.com/tiagoaosilveira/tiago-wordle/issues
-[license-shield]: https://img.shields.io/github/license/tiagoaosilveira/tiago-wordle.svg?style=for-the-badge
-[license-url]: https://github.com/tiagoaosilveira/tiago-wordle/blob/main/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/tiagoaosilveira/tiago-messenger.svg?style=for-the-badge
+[contributors-url]: https://github.com/tiagoaosilveira/tiago-messenger/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/tiagoaosilveira/tiago-messenger.svg?style=for-the-badge
+[forks-url]: https://github.com/tiagoaosilveira/tiago-messenger/network/members
+[stars-shield]: https://img.shields.io/github/stars/tiagoaosilveira/tiago-messenger.svg?style=for-the-badge
+[stars-url]: https://github.com/tiagoaosilveira/tiago-messenger/stargazers
+[issues-shield]: https://img.shields.io/github/issues/tiagoaosilveira/tiago-messenger.svg?style=for-the-badge
+[issues-url]: https://github.com/tiagoaosilveira/tiago-messenger/issues
+[license-shield]: https://img.shields.io/github/license/tiagoaosilveira/tiago-messenger.svg?style=for-the-badge
+[license-url]: https://github.com/tiagoaosilveira/tiago-messenger/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/tiagoaosilveira
 [product-screenshot]: public/images/interface.png
