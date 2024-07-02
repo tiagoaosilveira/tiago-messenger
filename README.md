@@ -102,12 +102,14 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    git clone https://github.com/tiagoaosilveira/tiago-messenger.git
    ```
-2. Install NPM packages
+2. Copy `.env.example` and rename it to `.env` file 
+3. Replace `.env` file variables with your own
+4. Install NPM packages
    ```sh
    npm install
    ```
 
-3. Run it
+5. Run it
    ```sh
    npm run dev
    ```
